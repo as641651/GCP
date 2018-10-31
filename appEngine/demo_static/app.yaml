@@ -1,0 +1,13 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /static
+  static_dir: staticfiles/
+- url: /.*
+  script: demo_static.wsgi.application
+
+libraries:
+- name: django
+  version: 1.11
