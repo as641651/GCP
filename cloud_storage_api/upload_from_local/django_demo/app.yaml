@@ -1,0 +1,13 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /.*
+  script: demo.wsgi.application
+
+libraries:
+- name: django
+  version: 1.11
+- name: ssl
+  version: latest
