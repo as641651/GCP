@@ -10,6 +10,7 @@ def index():
 
         username = request.form.get('username')
         email = request.form.get('email')
+        password = request.form.get('password')
 
         ##Add details to cloud
         from google.appengine.api import app_identity
@@ -32,7 +33,7 @@ def index():
         gcs_file.close()
 
         ##add details
-        contents += "\n" + str(username) + "\t" + str(email)
+        contents += "\n" + str(username) + "\t" + str(email) + "\t" + str(password)
 
         ##write back
         gcs_file = gcs.open(filename, 'w', content_type='text/plain')
