@@ -1,0 +1,3 @@
+sounddevice
+jupyter
+numpy

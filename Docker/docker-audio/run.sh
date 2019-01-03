@@ -1,0 +1,1 @@
+docker run -it -p 8000:8888 -p 0.0.0.0:6005:6006 -v ${1:-$PWD}:/home --device /dev/snd  -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native -v ~/.config/pulse/cookie:/root/.config/pulse/cookie  --runtime=nvidia senesence/docker-audio
